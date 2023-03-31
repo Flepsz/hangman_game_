@@ -4,6 +4,9 @@ from logic import *
 
 
 def play_nutella():
+    """
+    Nutella mode, with 2 hints and unlimited time.
+    """
     print("Welcome to the {} Nutella {} mode!".format(color['yellowz'], color['r']))
     print("You have 6 lives and hints available.\n")
     print("Hint: It's a computer language!")
@@ -17,6 +20,9 @@ def play_nutella():
 
 
 def play_cafe_com_leite():
+    """
+    Café com Leite Mode, with 1 hint and 30 seconds.
+    """
     print("Welcome to {} Café com Leite {} mode! You have 30 seconds to guess the word."
           .format(color['bluez'], color['r']))
     hint_cafe = "Hint: It's a computer hardware."
@@ -29,6 +35,9 @@ def play_cafe_com_leite():
 
 
 def play_raiz():
+    """
+    Raiz mode, with 1 hint and words by API(So HARD)
+    """
     print("Welcome to the {} Raiz {} mode!".format(color['cyanz'], color['r']))
     print("You have 20 seconds to guess the word.\n")
 
