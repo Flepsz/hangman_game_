@@ -2,6 +2,9 @@ from gamemodes import *
 
 
 def main():
+    """
+    Execute the game.
+    """
     print("Welcome to Hangman Game!")
     while True:
         level = get_level()
