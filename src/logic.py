@@ -1,15 +1,8 @@
 import time
 
 color = {
-    # Regular colors
-    'black': '\33[30m',
     'red': '\33[31m',
     'green': '\33[32m',
-    'yellow': '\33[33m',
-    'blue': '\33[34m',
-    'magenta': '\33[35m',
-    'cyan': '\33[36m',
-    'white': '\33[37m',
 
     'redz': '\33[7;91m',
     'yellowz': '\33[7;93m',
@@ -17,27 +10,15 @@ color = {
     'greenz': '\33[7;92m',
     'cyanz': '\33[7;96m',
 
-    # Background colors
-    'black_bg': '\33[40m',
-    'red_bg': '\33[41m',
-    'green_bg': '\33[42m',
-    'yellow_bg': '\33[43m',
-    'blue_bg': '\33[44m',
-    'magenta_bg': '\33[45m',
-    'cyan_bg': '\33[46m',
-    'white_bg': '\33[47m',
-
-    # Modifiers
-    'bold': '\33[1m',
-    'underline': '\33[4m',
-    'invert': '\33[7m',
-
-    # Reset
     'r': '\33[m'
 }
 
 
 def get_level():
+    """
+    Using inquirer choose the game mode.
+    :return: The game mode.
+    """
     import inquirer
     questions = [
         inquirer.List('modes',
@@ -50,6 +31,13 @@ def get_level():
 
 
 def play_game(word, time_set, num_lives, hint):
+    """
+    Principal logic of the game.
+    :param word: The word chosen in the list.
+    :param time_set: How much time in the game modes.
+    :param num_lives: How much tries you have.
+    :param hint: Just a hint of the game.
+    """
     start_time = time.time()
     current_word = list("_" * len(word))
     guessed_letters = set()
